@@ -1,0 +1,627 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as mixins;
+@use "../utils/breakpoints" as breakpoints;
+
+@include breakpoints.responsive-to(xxl) {
+    // Extra Large	Laptops grandes / monitores desktop
+    .hero {
+        @include mixins.flex-center(row);
+        padding: 0 4em;
+        color: $primary-color;
+        text-align: center;
+        height: calc(35em - 10vh);
+        justify-content: space-evenly;
+        align-items: start;
+        overflow: hidden;
+
+        .hero_nav__box {
+            margin: 2em 0;
+        }
+    }
+
+    .back {
+        visibility: hidden;
+    }
+
+    .hero_box {
+        @include mixins.flex-center(row);
+        width: 100%;
+        height: 22em;
+        margin: 2em 0;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: baseline;
+        text-align: start;
+
+        h1 {
+            font-family: $font-stack;
+            font-weight: 1000;
+            font-size: 4vw;
+            margin-bottom: 1rem;
+            line-height: 100%;
+        }
+
+        p {
+            font-size: 1.25rem;
+            font-weight: 100;
+            margin-bottom: 1em;
+        }
+
+        .hero_title {
+            @include mixins.flex-center(column);
+            justify-content: center;
+        }
+
+        .hero_box__image {
+            @include mixins.flex-center(column);
+            justify-content: center;
+            width: 10%;
+            margin: 1vh auto 0 auto;
+        }
+    }
+
+    .hero__nav {
+        @include mixins.flex-center(row);
+        justify-content: space-between;
+        width: 55vw;
+        gap: 3em;
+
+        .hero__logo {
+            flex: 0 1 10%
+        }
+        ul {
+            @include mixins.flex-center(row);
+            flex: 1 0 90%;
+            padding: 0;
+            margin: 0;
+            justify-content: space-between;
+            list-style: none;
+
+            li a {
+                display: block;
+                margin: 0 1em;
+                text-decoration: none;
+                text-align: justify;
+                color: $primary-color;
+                font-size: 1.25em;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
+    .hero__image {
+        width: 100%;
+    }
+
+    .hero_image__right,
+    .hero_image__right img {
+        width: 40em;
+        overflow: clip;
+        margin-right: -4em;
+        padding-right: 0;
+    }
+}
+
+@include breakpoints.responsive-to(xl) {
+    // Large	Tablets em paisagem, laptops menores
+    .hero {
+        @include mixins.flex-center(row);
+        padding: 0 4em;
+        color: $primary-color;
+        text-align: center;
+        height: calc(35em - 10vh);
+        justify-content: space-evenly;
+        align-items: start;
+        overflow: hidden;
+
+        .hero_nav__box {
+            margin: 2em 0;
+        }
+    }
+
+    .back {
+        visibility: hidden;
+    }
+
+    .hero_box {
+        @include mixins.flex-center(row);
+        width: 100%;
+        height: 22em;
+        margin: 2em 0;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: baseline;
+        text-align: start;
+
+        h1 {
+            font-family: $font-stack;
+            font-weight: 1000;
+            font-size: 4vw;
+            margin-bottom: 1rem;
+            line-height: 100%;
+        }
+
+        p {
+            font-size: 1.25rem;
+            font-weight: 100;
+            margin-bottom: 1em;
+        }
+
+        .hero_title {
+            @include mixins.flex-center(column);
+            justify-content: center;
+        }
+
+        .hero_box__image {
+            @include mixins.flex-center(column);
+            justify-content: center;
+            width: 10%;
+            margin: 1vh auto 0 auto;
+        }
+    }
+
+    .hero__nav {
+        @include mixins.flex-center(row);
+        justify-content: space-between;
+        width: 55vw;
+        gap: 1em;
+
+        .hero__logo {
+            flex: 0 1 10%
+        }
+        ul {
+            @include mixins.flex-center(row);
+            flex: 1 0 90%;
+            padding: 0;
+            margin: 0;
+            justify-content: space-between;
+            list-style: none;
+
+            li a {
+                display: block;
+                margin: 0 1em;
+                text-decoration: none;
+                text-align: justify;
+                color: $primary-color;
+                font-size: 1em;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
+    .hero__image {
+        width: 100%;
+    }
+
+    .hero_image__right,
+    .hero_image__right img {
+        width: 50vw;
+        overflow: clip;
+        margin-right: -4em;
+        padding-right: 0;
+    }
+}
+
+@include breakpoints.responsive-to(lg) {
+    // Extra Large	Laptops grandes / monitores desktop
+    .hero__nav {
+        @include mixins.flex-center(row);
+        justify-content: space-between;
+        width: 25em;
+        gap: 1em;
+
+        .back {
+            visibility: hidden;
+        }
+
+        .hero__logo {
+            flex: 0 1 10%
+        }
+        ul {
+            @include mixins.flex-center(row);
+            flex: 1 0 90%;
+            padding: 0;
+            margin: 0;
+            justify-content: start;
+            align-content: space-between;
+            list-style: none;
+            flex-wrap: wrap;
+            gap: 1em;
+
+            li a {
+                display: block;
+                margin: 0 1em;
+                text-decoration: none;
+                text-align: justify;
+                color: $primary-color;
+                font-size: 1em;
+                flex: 1 1 45%;
+            }
+        }
+
+        .hero__menu-toggle {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            width: max-content;
+
+            .bar {
+                width: 28px;
+                height: 3px;
+                background-color: $primary-color;
+                border-radius: 2px;
+            }
+        }
+    }
+
+    .hero__image {
+        width: 100%;
+    }
+
+    .hero_image__right,
+    .hero_image__right img {
+        width: 35em;
+        overflow: clip;
+        margin-right: -8em;
+        padding-right: 0;
+    }
+}
+
+@include breakpoints.responsive-to(md) {
+    // Extra Large	Laptops grandes / monitores desktop
+    .hero {
+        @include mixins.flex-center(row);
+        background-color: $button-color;
+        color: $primary-color;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: calc(35em - 14vh);
+        justify-content: start;
+        align-items: start;
+
+        .hero_nav__box {
+            position: absolute;
+            background-color: $secondary-color;
+            top: 0;
+            padding: 1em 0 0 0;
+            margin: 0;
+            width: 100%;
+            height: 5em;
+            border-radius: 0 0 1em 1em;
+        }
+    }
+
+    .hero_top {
+        @include mixins.flex-center(row);
+        background-color: $secondary-color;
+        color: $secondary-color;
+        padding: 0 ;
+        width: 0;
+        height: 3em;
+    }
+
+    .hero__menu-toggle {
+        position: absolute;
+        margin-left: 90vw;
+        display: flex !important;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+        width: max-content;
+        z-index: 100;
+
+        .bar {
+            width: 1.6em;
+            height: 3px;
+            background-color: $primary-color;
+            border-radius: 2px;
+        }
+    }
+
+    .hero__nav {
+        @include mixins.flex-center(row);
+        
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 2em;
+        margin: 0 2em;
+        gap: 1em;
+
+        .hero__logo {
+            flex: 0 1 10%;
+            padding: 2em;
+            z-index: 200;
+        }
+
+        .back {
+            visibility: hidden;
+            height: 0;
+
+
+            &.ativo {
+                position: relative;
+                display: block;
+                text-align: center;
+                margin: 0 auto;
+                height: 5em;
+                top: calc(25em - 10vh);
+                visibility: visible;
+                z-index: 250;
+            }
+        }
+
+        ul {
+            visibility: hidden;
+            @include mixins.flex-center(column);
+            flex: 1 0 90%;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            justify-content: start;
+            align-content: space-between;
+            list-style: none;
+            flex-wrap: wrap;
+            gap: 1em;
+
+            li a {
+                display: block;
+                margin: 0 1em;
+                text-decoration: none;
+                text-align: justify;
+                color: $secondary-color;
+                font-size: 1em;
+                flex: 1 1 45%;
+            }
+            
+            &.ativo {
+                position: absolute;
+                visibility: visible;
+                background-color: $button-color;
+                font-size: 1.25em;
+                color: secondary-color;
+                padding: 2em;
+                top: 4em;
+                list-style: disc;
+                width: 100%;
+                height: calc(30em - 25vh);
+                z-index: 200;
+            }
+        }
+
+    }
+
+    .hero__image {
+        width: 100%;
+    }
+
+    .hero_image__right,
+    .hero_image__right img {
+        position: sticky;
+        width: 20em;
+        height: 100%;
+        left: 30%;
+    }
+
+    .hero_box {
+        @include mixins.flex-center(column);
+        background-color: $secondary-color;
+        width: max-content;
+        height: calc(35.3em - 22vh);
+        padding-left: 2em;
+        padding-top: 1em;
+        margin: 0;
+        flex-wrap: wrap;
+        align-content: baseline;
+        text-align: start;
+
+        h1 {
+            font-family: $font-stack;
+            font-weight: 1000;
+            font-size: 2em;
+            margin-bottom: 1rem;
+            line-height: 100%;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: 100;
+            margin-bottom: 1rem;
+        }
+
+        .hero_title {
+            @include mixins.flex-center(column);
+            justify-content: center;
+            width: 30%;
+        }
+
+        .hero_box__image {
+            @include mixins.flex-center(column);
+            justify-content: center;
+            margin: 0 auto 0 auto;
+        }
+    }
+}
+
+@include breakpoints.responsive-to(sm) {
+    // Extra Large	Laptops grandes / monitores desktop
+    .hero {
+        @include mixins.flex-center(row);
+        background-color: $button-color;
+        color: $primary-color;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: calc(35em - 14vh);
+        justify-content: start;
+        align-items: start;
+
+        .hero_nav__box {
+            position: absolute;
+            background-color: $secondary-color;
+            top: 0;
+            padding: 1em 0 0 0;
+            margin: 0;
+            width: 100%;
+            height: 5em;
+            border-radius: 0 0 1em 1em;
+        }
+    }
+
+    .hero_top {
+        @include mixins.flex-center(row);
+        background-color: $secondary-color;
+        color: $secondary-color;
+        padding: 0 ;
+        width: 0;
+        height: 3em;
+    }
+
+    .hero__menu-toggle {
+        position: absolute;
+        margin-left: 90vw;
+        display: flex !important;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+        width: max-content;
+        z-index: 100;
+
+        .bar {
+            width: 1.6em;
+            height: 3px;
+            background-color: $primary-color;
+            border-radius: 2px;
+        }
+    }
+
+    .hero__nav {
+        @include mixins.flex-center(row);
+        
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 2em;
+        margin: 0 2em;
+        gap: 1em;
+
+        .hero__logo {
+            flex: 0 1 10%;
+            padding: 2em;
+            z-index: 200;
+        }
+
+        .back {
+            visibility: hidden;
+            height: 0;
+
+
+            &.ativo {
+                position: relative;
+                display: block;
+                text-align: center;
+                margin: 0 auto;
+                height: 5em;
+                top: calc(25em - 10vh);
+                visibility: visible;
+                z-index: 250;
+            }
+        }
+
+        ul {
+            visibility: hidden;
+            @include mixins.flex-center(column);
+            flex: 1 0 90%;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            justify-content: start;
+            align-content: space-between;
+            list-style: none;
+            flex-wrap: wrap;
+            gap: 1em;
+
+            li a {
+                display: block;
+                margin: 0 1em;
+                text-decoration: none;
+                text-align: justify;
+                color: $secondary-color;
+                font-size: 1em;
+                flex: 1 1 45%;
+            }
+            
+            &.ativo {
+                position: absolute;
+                visibility: visible;
+                background-color: $button-color;
+                font-size: 1.25em;
+                color: secondary-color;
+                padding: 2em;
+                top: 4em;
+                list-style: disc;
+                width: 100%;
+                height: calc(30em - 25vh);
+                z-index: 200;
+            }
+        }
+
+    }
+
+    .hero__image {
+        width: 100%;
+    }
+
+    .hero_image__right,
+    .hero_image__right img {
+        position: sticky;
+        width: 20em;
+        height: 100%;
+        left: 30%;
+    }
+
+    .hero_box {
+        @include mixins.flex-center(column);
+        background-color: $secondary-color;
+        width: max-content;
+        height: calc(35.3em - 22vh);
+        padding-left: 2em;
+        padding-top: 1em;
+        margin: 0;
+        flex-wrap: wrap;
+        align-content: baseline;
+        text-align: start;
+
+        h1 {
+            font-family: $font-stack;
+            font-weight: 1000;
+            font-size: 2em;
+            margin-bottom: 1rem;
+            line-height: 100%;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: 100;
+            margin-bottom: 1rem;
+        }
+
+        .hero_title {
+            @include mixins.flex-center(column);
+            justify-content: center;
+            width: 30%;
+        }
+
+        .hero_box__image {
+            @include mixins.flex-center(column);
+            justify-content: center;
+            margin: 0 auto 0 auto;
+        }
+    }
+}

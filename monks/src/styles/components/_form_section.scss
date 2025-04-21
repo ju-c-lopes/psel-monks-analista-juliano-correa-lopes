@@ -1,0 +1,820 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as mixins;
+@use "../utils/breakpoints" as breakpoints;
+
+@include breakpoints.responsive-to(xxl) {
+    // Extra Large	Laptops grandes / monitores desktop
+    .form-section {
+        @include mixins.flex-center(row);
+        justify-content: space-between;
+        padding: 3.5em;
+        gap: 2rem;
+        background-color: $secondary-color;
+
+        .form-content {
+            border-radius: 1.5em;
+            padding: 1.5em;
+            background-color: $primary-color;
+            color: $secondary-color;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 1.25rem;
+
+            h2 {
+                font-size: 2rem;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            small {
+                font-size: 0.85rem;
+                color: $secondary-color;
+            }
+
+            .form-group {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+
+                input {
+                    padding: 0.75rem;
+                    border: 1px solid #ccc;
+                    border-radius: 6px;
+                }
+            }
+
+            .form-security {
+                align-self: start;
+                @include mixins.flex-center(row);
+                justify-content: space-between;
+                align-items: center;
+                width: 70%;
+                gap: 0.75rem;
+
+                h3 {
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                }
+
+                span {
+                    font-size: 1.25rem;
+                    color: $secondary-color;
+                    font-weight: 600;
+                }
+
+                .calculate {
+                    display: inline-block;
+                    padding: 1em;
+                    background: darken($primary-color, 10%);
+                    font-size: 1.25rem;
+                    color: $secondary-color;
+                    font-weight: 600;
+                    border-radius: 0.5em;
+                    text-align: center;
+                    width: 15vw;
+                }
+
+                input {
+                    width: 10em;
+                    padding: 0.5rem;
+                    border-radius: 4px;
+                    border: 1px solid #ccc;
+                }
+            }
+
+            input::placeholder {
+                color: #999;
+            }
+
+            input.input-error::placeholder {
+                color: red;
+            }
+
+            input.input-error {
+                border-color: red;
+                outline: none;
+            }
+
+            button {
+                align-self: center;
+                padding: 0.75rem 1.5rem;
+                background-color: lighten($button-color, 5%);
+                color: $secondary-color;
+                border: none;
+                border-radius: 0.5em;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $button-color;
+                }
+            }
+
+            button[disabled] {
+                opacity: 0.6;
+                cursor: not-allowed;
+            }
+
+            button.loading::after {
+                content: "⏳";
+                margin-left: 0.5rem;
+                animation: spin 1s linear infinite;
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .form-error {
+                color: red;
+                font-size: 0.8rem;
+                margin-bottom: 0.5rem;
+                display: block;
+            }
+        }
+    }
+}
+
+@include breakpoints.responsive-to(xl) {
+    // Large	Tablets em paisagem, laptops menores
+    .form-section {
+        @include mixins.flex-center(row);
+        justify-content: space-between;
+        padding: 3.5em;
+        gap: 2rem;
+        background-color: $secondary-color;
+
+        .form-content {
+            border-radius: 1.5em;
+            padding: 1.5em;
+            background-color: $primary-color;
+            color: $secondary-color;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 1.25rem;
+
+            h2 {
+                font-size: 2rem;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            small {
+                font-size: 0.85rem;
+                color: $secondary-color;
+            }
+
+            .form-group {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+
+                input {
+                    padding: 0.75rem;
+                    border: 1px solid #ccc;
+                    border-radius: 6px;
+                }
+            }
+
+            .form-security {
+                align-self: start;
+                @include mixins.flex-center(row);
+                justify-content: space-between;
+                align-items: center;
+                width: 70%;
+                gap: 0.75rem;
+
+                h3 {
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                }
+
+                span {
+                    font-size: 1.25rem;
+                    color: $secondary-color;
+                    font-weight: 600;
+                }
+
+                .calculate {
+                    display: inline-block;
+                    padding: 1em;
+                    background: darken($primary-color, 10%);
+                    font-size: 1.25rem;
+                    color: $secondary-color;
+                    font-weight: 600;
+                    border-radius: 0.5em;
+                    text-align: center;
+                    width: 15vw;
+                }
+
+                input {
+                    width: 10em;
+                    padding: 0.5rem;
+                    border-radius: 4px;
+                    border: 1px solid #ccc;
+                }
+            }
+
+            input::placeholder {
+                color: #999;
+            }
+
+            input.input-error::placeholder {
+                color: red;
+            }
+
+            input.input-error {
+                border-color: red;
+                outline: none;
+            }
+
+            button {
+                align-self: center;
+                padding: 0.75rem 1.5rem;
+                background-color: lighten($button-color, 5%);
+                color: $secondary-color;
+                border: none;
+                border-radius: 0.5em;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $button-color;
+                }
+            }
+
+            button[disabled] {
+                opacity: 0.6;
+                cursor: not-allowed;
+            }
+
+            button.loading::after {
+                content: "⏳";
+                margin-left: 0.5rem;
+                animation: spin 1s linear infinite;
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .form-error {
+                color: red;
+                font-size: 0.8rem;
+                margin-bottom: 0.5rem;
+                display: block;
+            }
+        }
+    }
+}
+
+@include breakpoints.responsive-to(lg) {
+    // Large	Tablets em paisagem, laptops menores
+    .form-section {
+        @include mixins.flex-center(row);
+        justify-content: space-between;
+        padding: 3.5em;
+        gap: 2rem;
+        background-color: $secondary-color;
+
+        .form-image {
+            img {
+                width: 100%;
+            }
+        }
+
+        .form-content {
+            border-radius: 1.5em;
+            padding: 1.5em;
+            background-color: $primary-color;
+            color: $secondary-color;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 1.25rem;
+
+            h2 {
+                font-size: 2rem;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            small {
+                font-size: 0.85rem;
+                color: $secondary-color;
+            }
+
+            .form-group {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+
+                input {
+                    padding: 0.75rem;
+                    border: 1px solid #ccc;
+                    border-radius: 6px;
+                }
+            }
+
+            .form-security {
+                align-self: start;
+                @include mixins.flex-center(row);
+                justify-content: space-between;
+                align-items: center;
+                width: 70%;
+                gap: 0.75rem;
+
+                h3 {
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                }
+
+                span {
+                    font-size: 1.25rem;
+                    color: $secondary-color;
+                    font-weight: 600;
+                }
+
+                .calculate {
+                    display: inline-block;
+                    padding: 1em;
+                    background: darken($primary-color, 10%);
+                    font-size: 1.25rem;
+                    color: $secondary-color;
+                    font-weight: 600;
+                    border-radius: 0.5em;
+                    text-align: center;
+                    width: 15vw;
+                }
+
+                input {
+                    width: 10em;
+                    padding: 0.5rem;
+                    border-radius: 4px;
+                    border: 1px solid #ccc;
+                }
+            }
+
+            input::placeholder {
+                color: #999;
+            }
+
+            input.input-error::placeholder {
+                color: red;
+            }
+
+            input.input-error {
+                border-color: red;
+                outline: none;
+            }
+
+            button {
+                align-self: center;
+                padding: 0.75rem 1.5rem;
+                background-color: lighten($button-color, 5%);
+                color: $secondary-color;
+                border: none;
+                border-radius: 0.5em;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $button-color;
+                }
+            }
+
+            button[disabled] {
+                opacity: 0.6;
+                cursor: not-allowed;
+            }
+
+            button.loading::after {
+                content: "⏳";
+                margin-left: 0.5rem;
+                animation: spin 1s linear infinite;
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .form-error {
+                color: red;
+                font-size: 0.8rem;
+                margin-bottom: 0.5rem;
+                display: block;
+            }
+        }
+    }
+}
+
+@include breakpoints.responsive-to(md) {
+    // Large	Tablets em paisagem, laptops menores
+    .form-section {
+        @include mixins.flex-center(column);
+        justify-content: space-between;
+        padding: 3.5em;
+        gap: 2rem;
+        background-color: $secondary-color;
+
+        .form-image {
+            img {
+                width: 100%;
+            }
+        }
+
+        .form-content {
+            border-radius: 1.5em;
+            padding: 1.5em;
+            background-color: $primary-color;
+            color: $secondary-color;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 1.25rem;
+
+            h2 {
+                font-size: 2rem;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            small {
+                font-size: 0.85rem;
+                color: $secondary-color;
+            }
+
+            .form-group {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 1rem;
+
+                input {
+                    padding: 0.75rem;
+                    border: 1px solid #ccc;
+                    border-radius: 6px;
+                }
+            }
+
+            .form-security {
+                align-self: start;
+                @include mixins.flex-center(column);
+                justify-content: space-between;
+                width: 100%;
+                gap: 0.75rem;
+            
+                h3 {
+                    width: 100%;
+                    text-align: center;
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                }
+            
+                // Agrupamento visual: span + span + input
+                span:nth-of-type(1),
+                span:nth-of-type(2),
+                input {
+                    display: inline-block !important;
+                }
+            
+                // Container virtual para a linha da verificação
+                display: block;
+            
+                // Alinhar a linha da verificação como se fosse um bloco
+                & > span:nth-of-type(1) {
+                    order: 1;
+                }
+            
+                & > span:nth-of-type(2) {
+                    order: 2;
+                    text-align: center;
+                }
+            
+                & > input {
+                    order: 3;
+                    position: sticky;
+                    right: 0;
+                }
+            
+                // Organiza os 3 itens (soma, =, resultado) lado a lado
+                & > span:nth-of-type(1),
+                & > span:nth-of-type(2),
+                & > input {
+                    display: flex;
+                    justify-content: space-between;
+                    vertical-align: middle;
+                    width: calc(100% / 3);
+                    margin: 1em 0;
+                }
+            
+                // Linha de soma: organiza horizontalmente com flex
+                &::after {
+                    content: "";
+                    display: flex;
+                    justify-content: center;
+                    gap: 1rem;
+                    flex-wrap: nowrap;
+                }
+            
+                .calculate {
+                    display: inline-block;
+                    padding: 1em;
+                    background: darken($primary-color, 10%);
+                    font-size: 1.25rem;
+                    color: $secondary-color;
+                    font-weight: 600;
+                    border-radius: 0.5em;
+                    text-align: center;
+                    width: 15vw;
+                }
+            
+                input {
+                    position: sticky;
+                    right: 0;
+                    text-align: center;
+                    padding: 0.5rem;
+                    border-radius: 4px;
+                    border: 1px solid #ccc;
+                }
+            }
+
+            input::placeholder {
+                color: #999;
+            }
+
+            input.input-error::placeholder {
+                color: red;
+            }
+
+            input.input-error {
+                border-color: red;
+                outline: none;
+            }
+
+            button {
+                align-self: center;
+                padding: 0.75rem 1.5rem;
+                background-color: lighten($button-color, 5%);
+                color: $secondary-color;
+                border: none;
+                border-radius: 0.5em;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $button-color;
+                }
+            }
+
+            button[disabled] {
+                opacity: 0.6;
+                cursor: not-allowed;
+            }
+
+            button.loading::after {
+                content: "⏳";
+                margin-left: 0.5rem;
+                animation: spin 1s linear infinite;
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .form-error {
+                color: red;
+                font-size: 0.8rem;
+                margin-bottom: 0.5rem;
+                display: block;
+            }
+        }
+    }
+}
+
+@include breakpoints.responsive-to(md) {
+    // Large	Tablets em paisagem, laptops menores
+    .form-section {
+        @include mixins.flex-center(column);
+        justify-content: space-between;
+        padding: 2em;
+        gap: 2rem;
+        background-color: $secondary-color;
+
+        .form-image {
+            img {
+                width: 100%;
+            }
+        }
+
+        .form-content {
+            border-radius: 1.5em;
+            padding: 1.5em;
+            background-color: $primary-color;
+            color: $secondary-color;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 1.25rem;
+
+            h2 {
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+                font-weight: 200;
+            }
+
+            small {
+                font-size: 0.85rem;
+                font-weight: 100;
+                color: $secondary-color;
+            }
+
+            .form-group {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 1rem;
+
+                input {
+                    padding: 0.75rem;
+                    border: 1px solid #ccc;
+                    border-radius: 6px;
+                }
+            }
+
+            .form-security {
+                align-self: start;
+                @include mixins.flex-center(column);
+                justify-content: space-between;
+                width: 100%;
+                gap: 0.75rem;
+            
+                h3 {
+                    width: 100%;
+                    text-align: start;
+                    font-weight: 600;
+                    font-size: 1.3rem;
+                }
+            
+                // Agrupamento visual: span + span + input
+                span:nth-of-type(1),
+                span:nth-of-type(2),
+                input {
+                    display: inline-block !important;
+                }
+            
+                // Container virtual para a linha da verificação
+                display: block;
+            
+                // Alinhar a linha da verificação como se fosse um bloco
+                & > span:nth-of-type(1) {
+                    order: 1;
+                    width: 6em;
+                }
+            
+                & > span:nth-of-type(2) {
+                    order: 2;
+                    text-align: center;
+                }
+            
+                & > input {
+                    order: 3;
+                    position: sticky;
+                    width: 6.3em;
+                    right: 0;
+                }
+            
+                // Organiza os 3 itens (soma, =, resultado) lado a lado
+                & > span:nth-of-type(1),
+                & > span:nth-of-type(2),
+                & > input {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 1em 0;
+                    gap: 0.5rem;
+                }
+            
+                // Linha de soma: organiza horizontalmente com flex
+                &::after {
+                    content: "";
+                    display: flex;
+                    justify-content: center;
+                    gap: 0.5rem;
+                    flex-wrap: nowrap;
+                }
+            
+                .calculate {
+                    display: inline-block;
+                    padding: 0.5em;
+                    background: darken($primary-color, 10%);
+                    font-size: 1rem;
+                    color: $secondary-color;
+                    font-weight: 600;
+                    border-radius: 0.5em;
+                    text-align: center;
+                    width: 15vw;
+                }
+            
+                input {
+                    position: sticky;
+                    right: 0;
+                    text-align: center;
+                    padding: 0.5rem;
+                    border-radius: 4px;
+                    border: 1px solid #ccc;
+                }
+            }
+
+            input::placeholder {
+                color: #999;
+            }
+
+            input.input-error::placeholder {
+                color: red;
+            }
+
+            input.input-error {
+                border-color: red;
+                outline: none;
+            }
+
+            button {
+                align-self: center;
+                padding: 0.75rem 1.5rem;
+                background-color: lighten($button-color, 5%);
+                color: $secondary-color;
+                border: none;
+                border-radius: 0.5em;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $button-color;
+                }
+            }
+
+            button[disabled] {
+                opacity: 0.6;
+                cursor: not-allowed;
+            }
+
+            button.loading::after {
+                content: "⏳";
+                margin-left: 0.5rem;
+                animation: spin 1s linear infinite;
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .form-error {
+                color: red;
+                font-size: 0.8rem;
+                margin-bottom: 0.5rem;
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,173 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as mixins;
+@use "../utils/breakpoints" as breakpoints;
+
+@include breakpoints.responsive-to(xxl) {
+    // Extra Large	Laptops grandes / monitores desktop
+    .products {
+        @include mixins.flex-center(column);
+        flex-wrap: wrap;
+        background-color: $primary-color;
+        color: $secondary-color;
+        font-size: 1.25rem;
+        padding: 3.5em 3.5em 1em 3.5em;
+
+        h2 {
+            font-family: $font-stack;
+            font-weight: 1000;
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            line-height: 100%;
+        }
+
+        p {
+            font-size: 1.75rem;
+            font-weight: 100;
+        }
+    }
+
+    .products_list {
+        @include mixins.flex-center(row);
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 2em;
+        gap: 0.5em;
+    }
+}
+
+@include breakpoints.responsive-to(xl) {
+    // Large	Tablets em paisagem, laptops menores
+    .products {
+        @include mixins.flex-center(column);
+        flex-wrap: wrap;
+        background-color: $primary-color;
+        color: $secondary-color;
+        font-size: 1.25rem;
+        padding: 3.5em 3.5em 1em 3.5em;
+
+        h2 {
+            font-family: $font-stack;
+            font-weight: 1000;
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            line-height: 100%;
+        }
+
+        p {
+            font-size: 1.75rem;
+            font-weight: 100;
+        }
+    }
+
+    .products_list {
+        @include mixins.flex-center(row);
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 2em;
+        gap: 0.5em;
+    }
+}
+
+@include breakpoints.responsive-to(lg) {
+    // Large	Tablets em paisagem, laptops menores
+    .products {
+        @include mixins.flex-center(column);
+        flex-wrap: wrap;
+        background-color: $primary-color;
+        color: $secondary-color;
+        font-size: 1.25rem;
+        padding: 3.5em 3.5em 1em 3.5em;
+
+        h2 {
+            font-family: $font-stack;
+            font-weight: 1000;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 100%;
+        }
+
+        p {
+            font-size: 1.25rem;
+            font-weight: 100;
+        }
+    }
+
+    .products_list {
+        @include mixins.flex-center(row);
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 2em;
+        gap: 0.5em;
+    }
+}
+
+@include breakpoints.responsive-to(md) {
+    // Large	Tablets em paisagem, laptops menores
+    .products {
+        @include mixins.flex-center(column);
+        flex-wrap: wrap;
+        background-color: $primary-color;
+        color: $secondary-color;
+        font-size: 1.25rem;
+        padding: 3.5em 3.5em 1em 3.5em;
+
+        h2 {
+            font-family: $font-stack;
+            font-weight: 1000;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 100%;
+        }
+
+        p {
+            font-size: 1.25rem;
+            font-weight: 100;
+        }
+    }
+
+    .products_list {
+        @include mixins.flex-center(column);
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 2em;
+        gap: 0.5em;
+    }
+}
+
+@include breakpoints.responsive-to(sm) {
+    // Large	Tablets em paisagem, laptops menores
+    .products {
+        @include mixins.flex-center(column);
+        flex-wrap: wrap;
+        background-color: $primary-color;
+        color: $secondary-color;
+        font-size: 1.25rem;
+        padding: 2.5em 1.5em;
+
+        h2 {
+            font-family: $font-stack;
+            font-weight: 1000;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            line-height: 100%;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: 100;
+        }
+    }
+
+    .products_list {
+        @include mixins.flex-center(column);
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 1em;
+        gap: 0.5em;
+    }
+}

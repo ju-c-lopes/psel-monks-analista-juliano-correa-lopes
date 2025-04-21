@@ -1,0 +1,175 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as mixins;
+@use "../utils/breakpoints" as breakpoints;
+
+@include breakpoints.responsive-to(xxl) {
+    // Extra Large	Laptops grandes / monitores desktop
+    .app-section {
+        @include mixins.flex-center(row);
+        background-color: $app-bg-color;
+        margin: 3.5em;
+        padding: 3em 4em;
+        justify-content: space-between;
+        color: $primary-color;
+        border-radius: 1.5em;
+
+        .app-section--content {
+            @include mixins.flex-center(column);
+            align-items: flex-start;
+            flex: 0 1 70%;
+            gap: 1em;
+        }
+
+        h2 {
+            font-weight: 1000;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 100%;
+        }
+
+        p {
+            display: flex;
+            font-size: 1.75rem;
+            font-weight: 100;
+            flex: 1 1 50%;
+        }
+    }
+
+    .app-section--image {
+        @include mixins.flex-center(column);
+        justify-content: space-between;
+        gap: 1em;
+    }
+}
+
+@include breakpoints.responsive-to(xl) {
+    // Large	Tablets em paisagem, laptops menores
+    .app-section {
+        @include mixins.flex-center(row);
+        background-color: $app-bg-color;
+        margin: 3.5em;
+        padding: 3em 4em;
+        justify-content: space-between;
+        color: $primary-color;
+        border-radius: 1.5em;
+
+        .app-section--content {
+            @include mixins.flex-center(column);
+            align-items: flex-start;
+            flex: 0 1 70%;
+            gap: 1em;
+        }
+
+        h2 {
+            font-weight: 1000;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 100%;
+        }
+
+        p {
+            display: flex;
+            font-size: 1.25rem;
+            font-weight: 100;
+            flex: 1 1 50%;
+        }
+    }
+
+    .app-section--image {
+        @include mixins.flex-center(column);
+        justify-content: space-between;
+        gap: 1em;
+    }
+}
+
+@include breakpoints.responsive-to(md) {
+    // Large	Tablets em paisagem, laptops menores
+    .app-section {
+        @include mixins.flex-center(column);
+        background-color: $app-bg-color;
+        margin: 3.5em;
+        padding: 3em 6em;
+        justify-content: space-between;
+        color: $primary-color;
+        border-radius: 1.5em;
+
+        .app-section--content {
+            @include mixins.flex-center(column);
+            align-items: flex-start;
+            flex: 0 1 70%;
+            gap: 1em;
+            margin-bottom: 2em;
+        }
+
+        h2 {
+            font-weight: 1000;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 100%;
+        }
+
+        p {
+            display: flex;
+            font-size: 1.25rem;
+            font-weight: 100;
+            flex: 1 1 50%;
+        }
+    }
+
+    .app-section--image {
+        @include mixins.flex-center(column);
+        justify-content: space-between;
+        width: 100%;
+        gap: 1em;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@include breakpoints.responsive-to(sm) {
+    // Large	Tablets em paisagem, laptops menores
+    .app-section {
+        @include mixins.flex-center(column);
+        background-color: $app-bg-color;
+        margin: 5em 2em 0 2em;
+        padding: 1.5em 1.5em;
+        justify-content: space-between;
+        color: $primary-color;
+        border-radius: 1.5em;
+
+        .app-section--content {
+            @include mixins.flex-center(column);
+            align-items: flex-start;
+            flex: 0 1 70%;
+            gap: 1em;
+            margin-bottom: 2em;
+        }
+
+        h2 {
+            font-weight: 1000;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 100%;
+        }
+
+        p {
+            display: flex;
+            font-size: 1.25rem;
+            font-weight: 100;
+            flex: 1 1 50%;
+        }
+    }
+
+    .app-section--image {
+        @include mixins.flex-center(column);
+        justify-content: space-between;
+        width: 100%;
+        gap: 1em;
+
+        img {
+            width: 100%;
+        }
+    }
+}

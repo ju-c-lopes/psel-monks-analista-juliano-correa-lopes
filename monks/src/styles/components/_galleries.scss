@@ -1,0 +1,277 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as mixins;
+@use "../utils/breakpoints" as breakpoints;
+
+@include breakpoints.responsive-to(xxl) {
+    // Extra Large	Laptops grandes / monitores desktop
+    .gallery {
+        @include mixins.flex-center(row);
+        flex-wrap: wrap;
+        padding: 3.5em;
+    }
+
+    .gallery_list {
+        display: flex;
+        color: $secondary-color;
+        gap: 2em;
+
+        .main-gallery,
+        .gallery_list--card {
+            flex: 0 1 50%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .main-gallery {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h2 {
+            font-family: $font-stack;
+            font-weight: 1000;
+            font-size: 4vw;
+            margin-bottom: 1rem;
+            line-height: 100%;
+        }
+
+        p {
+            font-size: 1.5vw;
+            font-weight: 100;
+            margin-bottom: 1rem;
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            flex: 1;
+            border-radius: 1rem;
+        }
+    }
+
+    .gallery_list--cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2rem;
+        flex: 1 1 50%;
+
+        .gallery-card {
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 1rem;
+            }
+        }
+    }
+}
+
+@include breakpoints.responsive-to(xl) {
+    // Large	Tablets em paisagem, laptops menores
+    .gallery {
+        @include mixins.flex-center(row);
+        flex-wrap: wrap;
+        padding: 3.5em;
+    }
+
+    .gallery_list {
+        display: flex;
+        color: $secondary-color;
+        gap: 2em;
+
+        .main-gallery,
+        .gallery_list--card {
+            flex: 0 1 50%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .main-gallery {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h2 {
+            font-family: $font-stack;
+            font-weight: 1000;
+            font-size: 4vw;
+            margin-bottom: 1rem;
+            line-height: 100%;
+        }
+
+        p {
+            font-size: 1.5vw;
+            font-weight: 100;
+            margin-bottom: 1rem;
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            flex: 1;
+            border-radius: 1rem;
+        }
+    }
+
+    .gallery_list--cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2rem;
+        flex: 1 1 50%;
+
+        .gallery-card {
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 1rem;
+            }
+        }
+    }
+}
+
+@include breakpoints.responsive-to(md) {
+    // Large	Tablets em paisagem, laptops menores
+    .gallery {
+        @include mixins.flex-center(column);
+        flex-wrap: wrap;
+        padding: 3.5em;
+    }
+
+    .gallery_list {
+        display: flex;
+        flex-direction: column;
+        color: $secondary-color;
+        gap: 2em;
+
+        .main-gallery,
+        .gallery_list--card {
+            flex: 0 1 50%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .main-gallery {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h2 {
+            font-family: $font-stack;
+            font-weight: 1000;
+            font-size: 2.5em;
+            margin-bottom: 1rem;
+            line-height: 100%;
+        }
+
+        p {
+            font-size: 1.5em;
+            font-weight: 100;
+            margin-bottom: 1rem;
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            flex: 1;
+            border-radius: 1rem;
+        }
+    }
+
+    .gallery_list--cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2rem;
+        flex: 1 1 50%;
+
+        .gallery-card {
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 1rem;
+            }
+        }
+    }
+}
+
+@include breakpoints.responsive-to(sm) {
+    // Large	Tablets em paisagem, laptops menores
+    .gallery {
+        @include mixins.flex-center(column);
+        flex-wrap: wrap;
+        padding: 0 2em;
+    }
+
+    .gallery_list {
+        display: flex;
+        flex-direction: column;
+        color: $secondary-color;
+        gap: 2em;
+
+        .main-gallery,
+        .gallery_list--card {
+            flex: 0 1 50%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .main-gallery {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h2 {
+            font-family: $font-stack;
+            font-weight: 1000;
+            font-size: 1.5em;
+            margin-bottom: 1rem;
+            line-height: 100%;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: 100;
+            margin-bottom: 1rem;
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            flex: 1;
+            border-radius: 1rem;
+        }
+    }
+
+    .gallery_list--cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2rem;
+        flex: 1 1 50%;
+
+        .gallery-card {
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 1rem;
+            }
+        }
+    }
+}

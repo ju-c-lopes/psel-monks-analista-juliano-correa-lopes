@@ -1,0 +1,224 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as mixins;
+@use "../utils/breakpoints" as breakpoints;
+
+@include breakpoints.responsive-to(xxl) {
+    // Extra Large	Laptops grandes / monitores desktop
+    .card {
+        @include mixins.flex-center(column);
+        align-items: start;
+        background-color: $card-bg-color;
+        border-radius: 0.5rem;
+        width: calc((100% / 4) - 1em) !important;
+        word-wrap: break-word;
+        padding: 1em;
+        gap: 1em;
+
+        h3 {
+            display: inline-block;
+            font-family: $font-stack;
+            font-weight: 1000;
+            font-size: 1.8vw;
+            line-height: 100%;
+            text-align: start;
+        }
+
+        p {
+            font-size: 1.25rem;
+            font-weight: 100;
+            text-align: start;
+        }
+
+        &:hover {
+            transition: background-color 0.3s ease-in-out;
+            background-color: darken($card-bg-color, 5%);
+        }
+    }
+
+    .card_image {
+        margin: 0;
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@include breakpoints.responsive-to(xl) {
+    // Large	Tablets em paisagem, laptops menores
+    .card {
+        @include mixins.flex-center(column);
+        align-items: start;
+        background-color: $card-bg-color;
+        border-radius: 0.5rem;
+        width: calc((100% / 4) - 1em) !important;
+        word-wrap: break-word;
+        padding: 1em;
+        gap: 1em;
+
+        h3 {
+            display: inline-block;
+            font-family: $font-stack;
+            font-weight: 1000;
+            font-size: 1.8vw;
+            line-height: 100%;
+            text-align: start;
+        }
+
+        p {
+            font-size: 1.25rem;
+            font-weight: 100;
+            text-align: start;
+        }
+
+        &:hover {
+            transition: background-color 0.3s ease-in-out;
+            background-color: darken($card-bg-color, 5%);
+        }
+    }
+
+    .card_image {
+        margin: 0;
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@include breakpoints.responsive-to(lg) {
+    // Large	Tablets em paisagem, laptops menores
+    .card {
+        @include mixins.flex-center(column);
+        align-items: start;
+        background-color: $card-bg-color;
+        border-radius: 0.5rem;
+        width: calc((100% / 4) - 1em) !important;
+        word-wrap: break-word;
+        padding: 0.5em;
+        gap: 1em;
+
+        h3 {
+            display: inline-block;
+            font-family: $font-stack;
+            font-weight: 1000;
+            font-size: 1em;
+            line-height: 100%;
+            text-align: start;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: 100;
+            text-align: start;
+        }
+
+        &:hover {
+            transition: background-color 0.3s ease-in-out;
+            background-color: darken($card-bg-color, 5%);
+        }
+    }
+
+    .card_image {
+        margin: 0;
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@include breakpoints.responsive-to(md) {
+    // Large	Tablets em paisagem, laptops menores
+    .card {
+        @include mixins.flex-center(column);
+        align-items: start;
+        background-color: $card-bg-color;
+        border-radius: 1rem;
+        width: 100% !important;
+        word-wrap: break-word;
+        padding: 1em;
+        gap: 1em;
+
+        h3 {
+            display: inline-block;
+            font-family: $font-stack;
+            font-weight: 1000;
+            font-size: 2em;
+            line-height: 100%;
+            text-align: start;
+        }
+
+        p {
+            font-size: 1.5rem;
+            font-weight: 100;
+            text-align: start;
+        }
+
+        &:hover {
+            transition: background-color 0.3s ease-in-out;
+            background-color: darken($card-bg-color, 5%);
+        }
+    }
+
+    .card_image {
+        margin: 0;
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@include breakpoints.responsive-to(sm) {
+    // Large	Tablets em paisagem, laptops menores
+    .card {
+        @include mixins.flex-center(column);
+        align-items: start;
+        background-color: $card-bg-color;
+        border-radius: 0.5rem;
+        width: 100% !important;
+        word-wrap: break-word;
+        padding: 0.5em;
+        gap: 1em;
+
+        h3 {
+            display: inline-block;
+            font-family: $font-stack;
+            font-weight: 1000;
+            font-size: 1.5em;
+            line-height: 100%;
+            text-align: start;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: 100;
+            text-align: start;
+            padding-bottom: 0.5em;
+        }
+
+        &:hover {
+            transition: background-color 0.3s ease-in-out;
+            background-color: darken($card-bg-color, 5%);
+        }
+    }
+
+    .card_image {
+        margin: 0;
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

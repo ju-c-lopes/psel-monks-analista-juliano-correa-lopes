@@ -1,0 +1,33 @@
+@use "../utils/variables" as *;
+@use "../utils/breakpoints" as *;
+
+@mixin flex-center($direction: row) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin responsive-to($breakpoint) {
+    @if $breakpoint == sm {
+        @media (max-width: $breakpoint) {
+            @content;
+        }
+    } @else if $breakpoint == md {
+        @media (max-width: $breakpoint) {
+            @content;
+        }
+    } @else if $breakpoint == lg {
+        @media (max-width: $breakpoint) {
+            @content;
+        }
+    } @else if $breakpoint == xl {
+        @media (max-width: $breakpoint) {
+            @content;
+        }
+    } @else if $breakpoint == xxl {
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+}

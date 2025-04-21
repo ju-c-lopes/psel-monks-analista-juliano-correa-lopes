@@ -1,0 +1,46 @@
+services:
+  db:
+    image: juclops/mysql-wordpress-monks:latest
+    container_name: wp-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wpuser
+      MYSQL_PASSWORD: desafiomonks2025
+    volumes:
+      - db_data:/var/lib/mysql
+
+  wordpress:
+    image: juclops/wordpress-desafio:latest
+    container_name: wp
+    restart: always
+    ports:
+      - "8000:80"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: wpuser
+      WORDPRESS_DB_PASSWORD: desafiomonks2025
+    depends_on:
+      - db
+    command: >
+      bash -c "
+        docker-entrypoint.sh apache2-foreground &
+        sleep 30 &&
+        wp plugin install advanced-custom-fields --activate &&
+        wp plugin install acf-to-rest-api --activate &&
+        wp theme install meu_tema --activate &&
+        wp media regenerate --yes
+      "
+
+  monks:
+    image: juclops/monks-react:latest
+    container_name: monks
+    ports:
+      - "5173:5173"
+    depends_on:
+      - wordpress
+
+volumes:
+  db_data:

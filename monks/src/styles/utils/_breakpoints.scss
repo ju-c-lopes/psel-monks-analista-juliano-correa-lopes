@@ -1,0 +1,28 @@
+$breakpoints: (
+    // Small	Celulares pequenos (iPhone SE, Galaxy mini)
+    sm: 480px,
+    // Medium	Celulares maiores / tablets em retrato
+    md: 768px,
+    // Large	Tablets em paisagem, laptops menores
+    lg: 1024px,
+    // Extra Large	Laptops grandes / monitores desktop
+    xl: 1280px,
+    // Extra Extra Large	Monitores 4K
+    xxl: 1281px,
+);
+
+@mixin responsive-to($breakpoint) {
+    $value: map-get($breakpoints, $breakpoint);
+    @if $breakpoint == xxl {
+        @media (min-width: $value) {
+            @content;
+        }
+    }
+    @else if $value {
+        @media (max-width: $value) {
+            @content;
+        }
+    } @else {
+        @warn "Breakpoint '#{$breakpoint}' não foi definido em $breakpoints.";
+    }
+}

@@ -1,0 +1,174 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as mixins;
+@use "../utils/breakpoints" as breakpoints;
+
+@include breakpoints.responsive-to(xxl) {
+    // Extra Large	Laptops grandes / monitores desktop
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $secondary-color;
+        padding: 2em;
+        gap: 2em;
+
+        .social-media {
+            display: flex;
+            gap: 1.5em;
+
+            a {
+                color: $primary-color;
+                font-size: 2rem;
+                text-decoration: none;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: darken($button-color, 10%);
+                }
+            }
+        }
+
+        .footer-content {
+            p {
+                color: $primary-color;
+                font-size: 1.3rem;
+                text-align: center;
+                margin-bottom: 0.5em;
+            }
+        }
+
+        .links {
+            display: flex;
+            flex-direction: row;
+            gap: 2em;
+
+            a {
+                color: $primary-color;
+                font-size: 1rem;
+                font-weight: 100;
+                text-decoration: none;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: darken($button-color, 10%);
+                }
+            }
+        }
+    }
+}
+
+@include breakpoints.responsive-to(xl) {
+    // Large	Tablets em paisagem, laptops menores
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $secondary-color;
+        padding: 2em;
+        gap: 2em;
+
+        .social-media {
+            display: flex;
+            gap: 1.5em;
+
+            a {
+                color: $primary-color;
+                font-size: 2rem;
+                text-decoration: none;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: darken($button-color, 10%);
+                }
+            }
+        }
+
+        .footer-content {
+            p {
+                color: $primary-color;
+                font-size: 1.3rem;
+                text-align: center;
+                margin-bottom: 0.5em;
+            }
+        }
+
+        .links {
+            display: flex;
+            flex-direction: row;
+            gap: 2em;
+
+            a {
+                color: $primary-color;
+                font-size: 1rem;
+                font-weight: 100;
+                text-decoration: none;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: darken($button-color, 10%);
+                }
+            }
+        }
+    }
+}
+
+@include breakpoints.responsive-to(sm) {
+    // Large	Tablets em paisagem, laptops menores
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $secondary-color;
+        padding: 0.5em;
+        gap: 2em;
+        padding-bottom: 2em;
+
+        .social-media {
+            display: flex;
+            gap: 1.5em;
+
+            a {
+                color: $primary-color;
+                font-size: 2rem;
+                text-decoration: none;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: darken($button-color, 10%);
+                }
+            }
+        }
+
+        .footer-content {
+            p {
+                color: $primary-color;
+                font-size: 1.3rem;
+                text-align: center;
+                margin-bottom: 0.5em;
+            }
+        }
+
+        .links {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2em;
+
+            a {
+                color: $primary-color;
+                font-size: 1rem;
+                font-weight: 100;
+                text-decoration: none;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: darken($button-color, 10%);
+                }
+            }
+        }
+    }
+}
