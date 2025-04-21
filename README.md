@@ -46,6 +46,16 @@ Aparecerá a tela de login do wordpress, e o login pode ser feito com as seguint
    - **Backend WordPress**: http://localhost:8000
    - **Painel Admin**: http://localhost:8000/wp-admin
 
+---
+
+#### 📦 Atualizar containers
+
+> É possível que precise atualizar os containeres após a instalação dos plugins do wordpress, caso seja o caso, execute o compando abaixo:
+
+```bash
+   docker compose restart
+```
+
 📁 Estrutura montada:
 - `./monks`: aplicação React (Vite + SCSS)
 - `./wordpress`: tema WordPress customizado
