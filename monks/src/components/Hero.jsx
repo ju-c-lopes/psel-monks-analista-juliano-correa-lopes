@@ -21,7 +21,7 @@ const Hero = () => {
 
     return (
         <section className="hero">
-            <div className="hero_nav__box">
+            <div className={menuOpen ? "hero_nav__box ativo" : "hero_nav__box"}>
 
                 <div className="hero_top">
                     <nav className="hero__nav">
@@ -43,7 +43,7 @@ const Hero = () => {
                     </div>
                 </div>
 
-                <div className="hero_box">
+                <div className={menuOpen ? "hero_box ativo" : "hero_box"}>
                     <div className="hero_title">
                         <h1>Lorem, ipsum dolor sit amet consectetur</h1>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate cumque qui sit illum, nostrum maiores.</p>
