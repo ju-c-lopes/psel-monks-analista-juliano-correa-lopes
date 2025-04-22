@@ -55,7 +55,7 @@ const Hero = () => {
             </div>
 
             <div className="hero_image__right">
-                <img src={dnaMonks} alt="DNA Monks" />
+                <img className={menuOpen ? "ativo" : ""} src={dnaMonks} alt="DNA Monks" />
             </div>
         </section>
     );

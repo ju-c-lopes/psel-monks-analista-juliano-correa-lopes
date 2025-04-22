@@ -464,7 +464,6 @@
         align-items: start;
 
         .hero_nav__box {
-            position: absolute;
             background-color: $secondary-color;
             top: 0;
             padding: 1em 0 0 0;
@@ -488,7 +487,7 @@
     }
 
     .hero__menu-toggle {
-        position: relative;
+        position: sticky;
         display: flex !important;
         flex-direction: column;
         justify-content: start;
@@ -587,13 +586,17 @@
         width: 20em;
         height: 100%;
         left: 30%;
+
+        &.ativo {
+            z-index: -1;
+        }
     }
 
     .hero_box {
         @include mixins.flex-center(column);
         background-color: $secondary-color;
         width: max-content;
-        height: calc(35.3em - 25vh);
+        height: calc(31em - 14vh);
         padding-left: 2em;
         padding-top: 1em;
         margin: 0;

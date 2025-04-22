@@ -28,14 +28,14 @@ services:
       bash -c "
         docker-entrypoint.sh apache2-foreground &
         sleep 30 &&
-        wp plugin install advanced-custom-fields --activate &&
-        wp plugin install acf-to-rest-api --activate &&
-        wp theme install meu_tema --activate &&
-        wp media regenerate --yes
+        wordpress plugin install advanced-custom-fields --activate &&
+        wordpress plugin install acf-to-rest-api --activate &&
+        wordpress theme install meu_tema --activate &&
+        wordpress media regenerate --yes
       "
 
   monks:
-    image: juclops/monks-react:1.1
+    image: juclops/monks-react:1.5
     container_name: monks
     ports:
       - "5173:5173"
