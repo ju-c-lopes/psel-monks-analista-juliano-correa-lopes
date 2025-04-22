@@ -35,7 +35,7 @@ services:
       "
 
   monks:
-    image: juclops/monks-react:1.5
+    image: juclops/monks-react:1.6
     container_name: monks
     ports:
       - "5173:5173"
